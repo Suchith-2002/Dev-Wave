@@ -1,0 +1,33 @@
+{
+  "name": "Dev Wave",
+  "version": "1.0.0",
+  "description": "Developers Media",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Uppalapati Suchith Chowdary",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.7",
+    "express": "^4.17.1",
+    "express-validator": "^6.11.1",
+    "gravatar": "^1.8.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.10",
+    "react-router-dom": "^6.3.0",
+    "request": "^2.88.2",
+    "npm": "8.14.0"
+  },
+  "devDependencies": {
+    "@types/config": "^0.0.41",
+    "concurrently": "^6.1.0",
+    "nodemon": "^2.0.7"
+  }
+}
